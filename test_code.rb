@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "code.rb" #name of file being tested
+require_relative "code2.rb" #name of file being tested
 
 
 class TestCodeFile < Minitest::Test #letter case is important as in Minitest
@@ -15,11 +15,23 @@ class TestCodeFile < Minitest::Test #letter case is important as in Minitest
 		assert_equal(2,code(2))
 	end
 
-	def test_function_returns_string_mined #fails test expected "mined" actual is 3
-		assert_equal("mined",code(3))
+	def test_function_returns_string_mined 
+		assert_equal("mined",code(3)) #example the parameter input is "3" and expected output is "mined"
 	end
 
 	def test_function_returns_5
 		assert_equal("minds",code(5))
+	end
+
+	def test_function_returns_6
+		assert_equal("minedminds",code(60))
+	end
+
+	def test_function_returns_7
+		assert_equal("mined",code(12))
+	end
+
+	def test_function_returns_8
+		assert_equal("minds",code(25)) #example of testing %5 in the "code2" file
 	end
 end
