@@ -15,13 +15,12 @@ require_relative "minedmindskataarray.rb"
 class Testminedmindskataarrayfile < Minitest::Test
 
 	def test_array_length
-		assert_equal(100,nums.count)
+		assert_equal(100,nums.count) #count is a method for obtaining information about an array
 	end 
 
-	#def test_index_replaced_Mined
-		#result = mineminds()
-		#assert_equal("Mined",result[4-1])
-	#end
+	def test_nums_replaced_minedmindsined
+		assert_equal("minedminds",nums[14])
+	end
 
 
 end
