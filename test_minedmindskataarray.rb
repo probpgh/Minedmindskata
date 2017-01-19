@@ -15,11 +15,15 @@ require_relative "minedmindskataarray.rb"
 class Testminedmindskataarrayfile < Minitest::Test
 
 	def test_array_length
-		results = minedminds()
-		assert_equal(100,results.count)
+		assert_equal(100,nums.count)
 	end 
 
-	def test_index_replaced_Mined
+	#def test_index_replaced_Mined
+		#result = mineminds()
+		#assert_equal("Mined",result[4-1])
+	#end
+
+
 end
 
 
