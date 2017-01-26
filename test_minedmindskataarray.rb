@@ -9,20 +9,36 @@
 
 
 require "minitest/autorun"
-require_relative "minedmindskataarray.rb"
+require_relative "minedmindskataarray.rb" #link to the file being tested
 
 
-class Testminedmindskataarrayfile < Minitest::Test
+class Testminedmindskataarrayfile < Minitest::Test #after Class, first word must be 'test'
 
-	def test_array_length
-		assert_equal(100,nums.count) #count is a method for obtaining information about an array
-	end 
+	def test_array_length #what is being tested for first run
+			larray = minedminds_array()
+			assert_equal(100,larray.size) #size is a method for obtaining information about an array
+		end
 
-	def test_nums_replaced_minedmindsined
-		assert_equal("minedminds",nums[14])
-	end
+	def test_nums_array_has_17
+			larray = minedminds_array()
+			numarray = larray.include? 17 #examining specific index in array
+			assert_equal(true, numarray)
+		end
 
+	def test_index_mined
+			wmined = minedminds_array()
+			assert_equal("mined", wmined[8])
+		end
 
+	def test_index_minds
+			wminds = minedminds_array()
+			assert_equal("minds", wminds[34])
+		end
+
+	def test_index_minedminds
+			wmminds = minedminds_array()
+			assert_equal("mined minds", wmminds[14])
+		end
 end
 
 
